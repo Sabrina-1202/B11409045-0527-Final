@@ -62,6 +62,7 @@ AI 一開始把 add 指令改成互動式輸入書名、ISBN、狀態，導致 t
 
 3. 修正的對話： (範例：我告訴它「請在結束前迴圈遍歷 JSON 資料並計算分類總額」)
 
+我告訴 AI：「請保留原本 legacy_lib.py 的指令格式，add 必須支援 add 書名/ISBN/狀態，borrow 必須支援 borrow ISBN，這樣 test_input_data.txt 才能直接貼上測試。另外 borrow 找不到書時請印出 Book Not Found。」
 ---
 
 ## 三、 成果驗證與測試  (共2小題，每小題10分，總共20分)
@@ -73,7 +74,24 @@ AI 一開始把 add 指令改成互動式輸入書名、ISBN、狀態，導致 t
 請貼上執行程式並輸入 show 後，顯示資料清單。(請從呼叫執行程式到結束程式完整的把操作對話複製到下框)
 
 ```log
-
+PS D:\NTUST-0527-Final-master> python modern_library.py
+=== 圖書管理系統 v1.0 (Modern) ===
+> add 深入淺出Python/978001/available
+Success
+> add 資料結構理論/978002/available
+Success
+> add 演算法實作/978003/available
+Success
+> add 重複測試書/978001/available
+ISBN Exist
+> borrow 978002
+Updated
+> show
+書名: 深入淺出Python, ISBN: 978001, 狀態: available
+書名: 資料結構理論, ISBN: 978002, 狀態: borrowed
+書名: 演算法實作, ISBN: 978003, 狀態: available
+> exit
+系統關閉
 ```
 
 ### 3.2 產出的資料檔案格式
@@ -82,11 +100,21 @@ AI 一開始把 add 指令改成互動式輸入書名、ISBN、狀態，導致 t
 
 ```json
 [
-  {
-    "title": "XXX",
-    "isbn": "XXX",
-    "status": "XXX"
-  }
+    {
+        "title": "深入淺出Python",
+        "isbn": "978001",
+        "status": "available"
+    },
+    {
+        "title": "資料結構理論",
+        "isbn": "978002",
+        "status": "borrowed"
+    },
+    {
+        "title": "演算法實作",
+        "isbn": "978003",
+        "status": "available"
+    }
 ]
 ```
 
@@ -98,7 +126,9 @@ AI 一開始把 add 指令改成互動式輸入書名、ISBN、狀態，導致 t
 
 
 ```log
-# 請在此處貼上 git log 內容
+0b92fdd (HEAD -> main, origin/main) Complete final project
+1c9e7f5 Initial project setup
+c478175 Initial project setup
 ```
 
 ### 4.2. GitHub Repository 連結(此小題7分)
@@ -106,7 +136,7 @@ AI 一開始把 add 指令改成互動式輸入書名、ISBN、狀態，導致 t
 將專案推送到 GitHub (Public) 若提交到 Private 連結不給分。 請設定 Repository 名稱為 `學號-0527-Final` Ex: B11526748-0527-Final **請用 - 不是 _**
 
 ```log
-# 請貼上你的 Repo 網址
+https://github.com/Sabrina-1202/B11409045-0527-Final
 ```
 
 希望這兩份 Markdown 格式能幫你省下不少排版時間！祝你的考試順利舉行！
