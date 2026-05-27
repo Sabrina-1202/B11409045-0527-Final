@@ -62,7 +62,7 @@ AI 一開始把 add 指令改成互動式輸入書名、ISBN、狀態，導致 t
 
 3. 修正的對話： (範例：我告訴它「請在結束前迴圈遍歷 JSON 資料並計算分類總額」)
 
-我告訴 AI：「請保留原本 legacy_lib.py 的指令格式，add 必須支援 add 書名/ISBN/狀態，borrow 必須支援 borrow ISBN，這樣 test_input_data.txt 才能直接貼上測試。另外 borrow 找不到書時請印出 Book Not Found。」
+我告訴 AI：請保留原本 legacy_lib.py 的指令格式，add 必須支援 add 書名/ISBN/狀態，borrow 必須支援 borrow ISBN，這樣 test_input_data.txt 才能直接貼上測試。另外 borrow 找不到書時請印出 Book Not Found。
 ---
 
 ## 三、 成果驗證與測試  (共2小題，每小題10分，總共20分)
@@ -126,7 +126,8 @@ Updated
 
 
 ```log
-0b92fdd (HEAD -> main, origin/main) Complete final project
+031d0d0 Update Answer.MD
+0b92fdd Complete final project
 1c9e7f5 Initial project setup
 c478175 Initial project setup
 ```
